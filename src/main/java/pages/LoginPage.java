@@ -13,11 +13,11 @@ public class LoginPage {
         this.driver = driver;
     }
 
-    public void setUserName() {
+    public void setUserName(String userName) {
         driver.findElement(userNameSelector).sendKeys("standard_user");
     }
 
-    public void setPassword() {
+    public void setPassword(String password) {
         driver.findElement(passwordSelector).sendKeys("secret_sauce");
     }
 
