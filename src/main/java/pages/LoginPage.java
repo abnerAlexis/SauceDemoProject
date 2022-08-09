@@ -14,11 +14,11 @@ public class LoginPage {
     }
 
     public void setUserName(String userName) {
-        driver.findElement(userNameSelector).sendKeys("standard_user");
+        driver.findElement(userNameSelector).sendKeys(userName);
     }
 
     public void setPassword(String password) {
-        driver.findElement(passwordSelector).sendKeys("secret_sauce");
+        driver.findElement(passwordSelector).sendKeys(password);
     }
 
     public ProductsPage clickLoginButton() {
