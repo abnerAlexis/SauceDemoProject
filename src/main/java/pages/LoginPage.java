@@ -25,4 +25,10 @@ public class LoginPage {
         driver.findElement(loginButton).click();
         return new ProductsPage(driver);
     }
+
+    public void login(String username, String password) {
+        setUserName(username);
+        setPassword(password);
+        clickLoginButton();
+    }
 }
