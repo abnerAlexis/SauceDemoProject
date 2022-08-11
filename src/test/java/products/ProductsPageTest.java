@@ -13,4 +13,6 @@ public class ProductsPageTest extends BaseTests {
         String expected = "YOUR CART";
         assertEquals(actual, expected);
     }
+
+
 }
