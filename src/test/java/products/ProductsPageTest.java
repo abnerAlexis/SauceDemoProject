@@ -7,7 +7,7 @@ import static org.testng.Assert.assertEquals;
 public class ProductsPageTest extends BaseTests {
     @Test
     public void addToCart() {
-        loginPage.login("standard_user", "secret_sauce");
+        loginPage.login();
         productsPage.addToShoppingCart();
         String actual = productsPage.getPageTitle().getText();
         String expected = "YOUR CART";

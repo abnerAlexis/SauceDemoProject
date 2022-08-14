@@ -5,6 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import pages.CheckoutInfo;
+import pages.CheckoutOverviewPage;
 import pages.LoginPage;
 import pages.ProductsPage;
 import pages.ShoppingCart;
@@ -15,6 +16,7 @@ public class BaseTests {
     protected ProductsPage productsPage;
     protected ShoppingCart shoppingCart;
     protected CheckoutInfo checkoutInfo;
+    protected CheckoutOverviewPage checkoutOverviewPage;
 
     @BeforeClass
     public void setUp(){
@@ -25,10 +27,11 @@ public class BaseTests {
         productsPage = new ProductsPage(driver);
         shoppingCart = new ShoppingCart(driver);
         checkoutInfo = new CheckoutInfo(driver);
+        checkoutOverviewPage = new CheckoutOverviewPage(driver);
     }
 
     @AfterClass
     public void tearDown() {
-//        driver.close();
+        driver.close();
     }
 }

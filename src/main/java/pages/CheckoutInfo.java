@@ -12,10 +12,11 @@ public class CheckoutInfo {
     private By lastnameField = By.cssSelector("#last-name");
     private By zipCodeField = By.cssSelector("#postal-code");
     private By form = By.cssSelector(".checkout_info");
-    private By continueButton = By.cssSelector(".title");
+    private By continueButton = By.cssSelector("#continue");
     private By firstName = By.cssSelector("#first-name");
     private By lastName = By.cssSelector("#last-name");
     private By zipCode = By.cssSelector("#postal-code");
+    private By banner = By.cssSelector(".header_secondary_container");
 
     public CheckoutInfo(WebDriver driver) {
         this.driver = driver;
@@ -24,6 +25,10 @@ public class CheckoutInfo {
     public void waitVisibility() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         wait.until(ExpectedConditions.visibilityOfElementLocated(form));
+    }
+
+    public String getPageBannerText() {
+        return driver.findElement(banner).getText();
     }
 
     public CheckoutOverviewPage fillInformationForm(String name, String lastname, String zipCode) {

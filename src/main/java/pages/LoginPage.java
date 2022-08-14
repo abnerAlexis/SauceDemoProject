@@ -26,9 +26,9 @@ public class LoginPage {
         return new ProductsPage(driver);
     }
 
-    public void login(String username, String password) {
-        setUserName(username);
-        setPassword(password);
+    public void login() {
+        setUserName("standard_user");
+        setPassword("secret_sauce");
         clickLoginButton();
     }
 }

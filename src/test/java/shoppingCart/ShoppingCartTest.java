@@ -7,7 +7,7 @@ import static org.testng.Assert.assertEquals;
 public class ShoppingCartTest extends BaseTests {
     @Test
     public void removeItemTest() {
-        loginPage.login("standard_user", "secret_sauce");
+        loginPage.login();
         productsPage.addToShoppingCart();
         int numberOfCheckedItems = Integer.parseInt(shoppingCart.getNumberOfItems());
         shoppingCart.removeItem();
