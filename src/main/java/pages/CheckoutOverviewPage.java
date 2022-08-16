@@ -8,6 +8,8 @@ public class CheckoutOverviewPage {
     private By finishBtn = By.cssSelector("#finish");
     private By pageBanner = By.cssSelector(".header_secondary_container");
     private By subTotal = By.cssSelector(".summary_subtotal_label");
+    private By tax = By.cssSelector(".summary_tax_label");
+    private By total = By.cssSelector(".summary_total_label");
 
     public CheckoutOverviewPage(WebDriver driver) {
         this.driver = driver;
@@ -20,6 +22,16 @@ public class CheckoutOverviewPage {
     public String getSubTotal() {
         return driver.findElement(subTotal).getText();
     }
+
+    public String getTax() {
+        return driver.findElement(tax).getText();
+    }
+
+    public String getTotal() {
+        return driver.findElement(total).getText();
+    }
+
+
 
     public void finisShopping() {
         driver.findElement(finishBtn).click();

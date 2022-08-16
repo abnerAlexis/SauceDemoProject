@@ -1,6 +1,7 @@
 package checkout;
 
 import base.BaseTests;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
@@ -17,6 +18,11 @@ public class CheckoutOverviewPageTest extends BaseTests {
         checkoutInfo.fillInformationForm("Lulu", "Butterbiscuit", "12308");
     }
 
+    @AfterMethod
+    private void finishShoppping() {
+        checkoutOverviewPage.finisShopping();
+    }
+
     @Test
     public void getPageBanner() {
         String actual = checkoutOverviewPage.getPageBanner();
@@ -28,5 +34,17 @@ public class CheckoutOverviewPageTest extends BaseTests {
     public void getSubTotal() {
         String actual = checkoutOverviewPage.getSubTotal();
         String expected = "Item total: $79.98";
+    }
+
+    @Test
+    public void getTax() {
+        String actual = checkoutOverviewPage.getTax();
+        String expected = "Tax: $6.40";
+    }
+
+    @Test
+    public void getTotal() {
+        String actual = checkoutOverviewPage.getTotal();
+        String expected = "Total: $86.38";
     }
 }
