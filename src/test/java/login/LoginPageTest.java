@@ -16,4 +16,14 @@ public class LoginPageTest extends BaseTests {
         String expected = "PRODUCTS";
         assertEquals(actual, expected);
     }
+
+    @Test
+    public void justLogin() {
+        loginPage.loginStandardUser();
+    }
+
+    @Test
+    public void testProblemUserLogin() {
+        loginPage.loginProblemUser();
+    }
 }

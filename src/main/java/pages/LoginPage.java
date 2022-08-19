@@ -26,9 +26,17 @@ public class LoginPage {
         return new ProductsPage(driver);
     }
 
-    public void login() {
+    public void loginStandardUser() {
         setUserName("standard_user");
         setPassword("secret_sauce");
         clickLoginButton();
     }
+
+    public void loginProblemUser() {
+        setUserName("problem_user");
+        setPassword("secret_sauce");
+        clickLoginButton();
+    }
+
+
 }

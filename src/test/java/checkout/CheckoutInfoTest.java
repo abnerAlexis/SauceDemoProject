@@ -1,7 +1,6 @@
 package checkout;
 
 import base.BaseTests;
-import org.asynchttpclient.util.Assertions;
 import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
@@ -9,7 +8,7 @@ public class CheckoutInfoTest extends BaseTests {
 
     @Test
     public void fillInformationFormTest() {
-        loginPage.login();
+        loginPage.loginStandardUser();
         productsPage.addToShoppingCart();
         shoppingCart.removeItem();
         shoppingCart.checkOut();
