@@ -5,11 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import ru.yandex.qatools.ashot.AShot;
-import ru.yandex.qatools.ashot.Screenshot;
-import javax.imageio.ImageIO;
-import java.io.File;
-import java.io.IOException;
 import java.time.Duration;
 
 public class ProductsPage {
@@ -19,7 +14,6 @@ public class ProductsPage {
     private By addFleeceJacket = By.cssSelector("#add-to-cart-sauce-labs-fleece-jacket");
     private By shoppingCart = By.cssSelector("#shopping_cart_container > a");
     private By title = By.cssSelector(".title");
-    private By backpackImageElement = By.cssSelector("#item_4_img_link > img");
 
     public ProductsPage(WebDriver driver) {
         this.driver = driver;

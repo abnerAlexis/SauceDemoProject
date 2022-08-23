@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import pages.CaptureImages;
 import pages.CheckoutInfo;
 import pages.CheckoutOverviewPage;
 import pages.LoginPage;
@@ -17,6 +18,7 @@ public class BaseTests {
     protected ShoppingCart shoppingCart;
     protected CheckoutInfo checkoutInfo;
     protected CheckoutOverviewPage checkoutOverviewPage;
+    protected CaptureImages captureImages;
 
     @BeforeClass
     public void setUp(){
@@ -28,6 +30,7 @@ public class BaseTests {
         shoppingCart = new ShoppingCart(driver);
         checkoutInfo = new CheckoutInfo(driver);
         checkoutOverviewPage = new CheckoutOverviewPage(driver);
+        captureImages = new CaptureImages(driver);
     }
 
     @AfterClass
