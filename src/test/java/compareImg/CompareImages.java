@@ -1,7 +1,15 @@
 package compareImg;
 
 import base.BaseTests;
+import com.groupdocs.comparison.Comparer;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+import ru.yandex.qatools.ashot.comparison.ImageDiff;
+import ru.yandex.qatools.ashot.comparison.ImageDiffer;
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 public class CompareImages extends BaseTests {
 
@@ -10,7 +18,7 @@ public class CompareImages extends BaseTests {
     public void getSuccessfulPageScreenShot() {
         loginPage.loginStandardUser();
         productsPage.getPageTitle();
-        captureImages.captureSuccesfulPageScreenShot();
+        captureImages.captureSuccessfulPageScreenShot();
     }
 
     @Test
@@ -19,6 +27,4 @@ public class CompareImages extends BaseTests {
         productsPage.getPageTitle();
         captureImages.captureProblemUserScreenShot();
     }
-
-
 }
